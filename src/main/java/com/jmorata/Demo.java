@@ -18,8 +18,10 @@ public class Demo implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        logger.info("Running DEV repository ...");
+
         List<String> myList = demoService.getAll();
-        myList.stream().forEach(s -> System.out.print(s));
+        myList.forEach(logger::info);
     }
 
 }
